@@ -21,5 +21,31 @@ public class MatrixMultiplication {
         int rows = matrixA.length;
         int cols = matrixB[0].length;
         int[][] result = new int[rows][cols];
+
+        // Track which row of the result is being filled
+        int colIndex = 0;
+
+        // Loop through each row in matrixA
+        for (int[] row: matrixA) {
+
+            // Track which column of the result is being filled
+            int rowIndex = 0;
+
+            // Loop through each column in matrixB
+            for (int[] col : matrixB) {
+
+                int sum = 0;
+
+                // Multiply matching elemenets and add to sum
+                for(int i = 0; i < row.length; i++){
+                    sum += row[i] * col[i];
+                }
+
+                // Store sum in the result matrix
+                result[colIndex][rowIndex] = sum;
+                rowIndex++;
+            }
+            colIndex++;
+        }
     }
 }
