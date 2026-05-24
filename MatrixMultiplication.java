@@ -47,5 +47,14 @@ public class MatrixMultiplication {
             }
             colIndex++;
         }
+
+        // Display the final result matrix
+        System.out.println("Result Matrix: ");
+        for (int[] row: result){
+            for (int val : row){
+                System.out.print(val + "\t");
+            }
+            System.out.println();
+        }
     }
 }
