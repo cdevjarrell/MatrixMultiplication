@@ -12,9 +12,8 @@ public class MatrixMultiplication {
 
         // Define second matrix (3 rows, 2 columns)
         int[][] matrixB = {
-                {7, 8},
-                {9, 10},
-                {11, 12}
+                {7, 9, 11},
+                {8, 10, 12}
         };
 
         // Result matrix size: rows from A, columns from B
